@@ -1,0 +1,16 @@
+<div id="comment-list">
+<h2>Comments</h2>
+<% @post.comments.reverse.each do |comment| %>
+<p>
+  <% if comment.commenter %>
+  <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
+
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+  <% end %>
+<% end %>
+</div>
