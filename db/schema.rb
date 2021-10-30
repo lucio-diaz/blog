@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_29_032958) do
+ActiveRecord::Schema.define(version: 2021_10_29_172202) do
 
   create_table "comments", force: :cascade do |t|
     t.string "commenter"

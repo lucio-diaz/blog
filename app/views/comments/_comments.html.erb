@@ -1,0 +1,10 @@
+<div id="comment-list">
+  <h2>Comments</h2>
+  <div id="individual-comment">
+    <% @post.comments.reverse.each do |comment| %>
+    <% if comment.commenter %> 
+    <%= render partial: 'comments/comment', locals: { commenter: comment.commenter, body: comment.body }  %>
+    <% end %>
+    <% end %>
+  </div>
+</div>

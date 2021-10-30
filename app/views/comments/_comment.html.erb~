@@ -1,0 +1,11 @@
+<div id="individual-comment">
+  <% if comment.commenter %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+    
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+  <%end>
+</div>
