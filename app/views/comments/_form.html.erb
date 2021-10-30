@@ -2,7 +2,7 @@
 <%= form_with model: [ @post, @post.comments.build ], local: false do |form| %>
   <p>
     <%= form.label :commenter %><br>
-    <%= form.text_field :commenter %>
+    <%= form.text_field :commenter, required: true %>
   </p>
   <p>
     <%= form.label :body %><br>
