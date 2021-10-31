@@ -1,4 +1,4 @@
-<%= form_with(model: post) do |form| %>
+<%= form_with model: post do |form| %>
   <% if post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :title , class: "control-label" %>
     <%= form.text_field :title %>
   </div>
 
