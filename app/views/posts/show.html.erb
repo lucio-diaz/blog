@@ -8,23 +8,34 @@
     <div class="col-8 bg-light">
       <p id="notice"><%= notice %></p>
 
-      <p>
-	<h2>Title:</h2>
-	<h5><%= @post.title %></h5>
+      <div class="card">
+	<div class="card-body">
+
+	  <p>
+	    <h2>Post title:</h2>
+	    <h5><%= @post.title %></h5>
+	  </p>
+	  
+	  <p>
+	    <h3>Text:</h3>
+	    <h5><%= @post.body %></h5>
+	  </p>
+
+	  <%= render 'comments/form' %>
+	</div>
+      </div>
+
+	
+      <div class="card">
+	<div class="card-body">
+	  <%= render 'comments/comments' %>
+	</div>
+      </div>
+
+      <p align="center">
+	<%= link_to 'Edit', edit_post_path(@post), :class=>"btn btn-secondary text-light" %> |
+	<%= link_to 'Back', posts_path, :class=>"btn btn-secondary text-light" %>
       </p>
-      
-      <p>
-	<h3>Body:</h3>
-	<h5><%= @post.body %></h5>
-      </p>
-      
-      <%= render 'comments/form' %>
-      
-      <%= render 'comments/comments' %>
-      
-      
-      <%= link_to 'Edit', edit_post_path(@post), :class=>"btn btn-secondary text-light" %> |
-      <%= link_to 'Back', posts_path, :class=>"btn btn-secondary text-light" %>
     </div>
 
     <div class="col-2">

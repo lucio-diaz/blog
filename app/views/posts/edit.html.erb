@@ -3,14 +3,17 @@
     <div class="col-2">
     </div>
     <div class="col-8">
-      
+
       <h1>Editing Post</h1>
       
       <%= render 'form', post: @post %>
-
-      <%= link_to 'Show', @post, :class=>"btn btn-secondary text-light"%> |
-      <%= link_to 'Back', posts_path, :class=>"btn btn-secondary text-light" %>
+      
+      <p align="center">
+	<%= link_to 'Show', @post, :class=>"btn btn-secondary text-light"%> |
+	<%= link_to 'Back', posts_path, :class=>"btn btn-secondary text-light" %>
+      </p>
     </div>
+    
     <div class="col-2">
     </div>
   </div>
