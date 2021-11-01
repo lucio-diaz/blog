@@ -1,14 +1,24 @@
-<h3>Add a comment:</h3>
+<h4>Add a comment:</h4>
+<p>
 <%= form_with model: [ @post, @post.comments.build ], local: false do |form| %>
-  <p>
-    <%= form.label :commenter, :class => "h5" %><br>
-    <%= form.text_field :commenter, required: true %>
-  </p>
-  <p>
-    <%= form.label :body, :class => "h5" %><br>
-    <%= form.text_area :body %>
-  </p>
-  <p>
-    <%= form.submit :class => "btn btn-primary" %>
-  </p>
+
+<div class="form-group">
+  <div class="field>"
+  <%= form.label :commenter, {class: "form-label"} %>
+  <%= form.text_field :commenter, class: "h4 form-control", placeholder: "Comment text", required: true %>
+  </div>
+</div>
+  
+<div class="form-group">
+  <div class="field">
+    <%= form.label :body, {class: "form-label"} %>
+    <%= form.text_area :body, class: "h4 form-control", placeholder: "Comment text" %>
+  </div>
+</div>
+  
+<div class="actions">
+  <%= form.submit :class => "btn btn-primary" %>
+</div>
+  
 <% end %>
+</p>
