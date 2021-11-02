@@ -2,5 +2,4 @@ clist=document.getElementById("individual-comment")
 newComment="<%= j render partial: 'comments/comment', locals: { commenter: @comment.commenter, body: @comment.body } %>"
 newComment+=clist.innerHTML
 clist.innerHTML=newComment
-document.getElementById("comment_commenter").value=""
-document.getElementById("comment_body").value=""
+document.getElementById("comment-form").reset()
