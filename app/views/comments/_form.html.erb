@@ -4,7 +4,7 @@
 
 <div class="form-group">
   <div class="field>"
-  <%= form.label :commenter, {class: "form-label"} %>
+  <%= form.label :commenter, class: "form-label" %>
   <%= form.text_field :commenter, class: "h4 form-control", placeholder: "Comment text", required: true %>
   </div>
 </div>
@@ -17,7 +17,7 @@
 </div>
   
 <div class="actions">
-  <%= form.submit :class => "btn btn-primary" %>
+  <%= form.submit class: "btn btn-primary" %>
 </div>
   
 <% end %>
