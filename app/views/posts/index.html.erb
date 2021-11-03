@@ -1,13 +1,12 @@
-
 <div class="container-fluid">
-    
+  
   <div class="row">
-
+    
     <div class="col-2">
     </div>
     
     <div class="col-8 bg-light">
-
+      
       <p id="notice"><%= notice %></p>
       
       <h1>Posts</h1>
@@ -26,10 +25,10 @@
 	  <tr>
 	    <td><%= post.title %></td>
 	    <td><%= post.body %></td>
-
 	    
-	      <td><%= link_to 'Show', post, :class=>"btn btn-secondary text-light"  %></td>
-	      
+	    
+	    <td><%= link_to 'Show', post, :class=>"btn btn-secondary text-light"  %></td>
+	    
 	    <td><%= link_to 'Edit', edit_post_path(post), :class=>"btn btn-secondary text-light" %></td>
 	    <td><%= link_to 'Destroy', post, :class=>"btn btn-secondary text-light", method: :delete, data: { confirm: 'Are you sure?' } %></td>
 	    
